@@ -1,0 +1,17 @@
+def FindIntersection(strArr):
+  list1=strArr[0].split(', ')
+  list2=strArr[1].split(', ')
+
+  list1=[int(i) for i in list1]
+  list2=[int(i) for i in list2]
+
+  list3=[]
+  for x in list1:
+    if x in list2:
+      list3.append(x)
+
+  listToStr = ','.join([str(i) for i in list3])
+  return listToStr
+  
+# keep this function call here 
+print(FindIntersection(input(["1, 2, 3, 4, 5", "6, 7, 8, 9, 10"])))
